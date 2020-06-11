@@ -20,8 +20,9 @@ __master>__ ```kubectl get nodes```
 3. Execute deployment script in worker node as shown below:\
 __worker>__ ```bash deploy-k8s-worker.sh```
 4. Now worker needs to be joined in the cluster. Run the below command in master node which will print to command to join.\
-__master>__ ```kubeadm token create --print-join-command```
+__master>__ ```kubeadm token create --print-join-command```\
 This would print kubeadm join command something like, \
-```sudo kubeadm join ...``` Copy and execute the same in worker node(s).
+```sudo kubeadm join ...```\
+Copy and execute the same in worker node(s).
 
-That's all. If you run ```kubectl get nodes``` in master, you will see worker has joined the cluster.
+That's all. If you run ```kubectl get nodes``` in master, you will see the worker has joined the cluster.
